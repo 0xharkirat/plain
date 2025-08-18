@@ -1,4 +1,4 @@
-extension ComparableIterableExtensions<T extends Comparable<T>> on Iterable<T> {
+extension RubyIterableExtensions<T extends Comparable<Object?>> on Iterable<T> {
   /// Smallest element (throws on empty). Use minOrNull() if unsure.
   T get min {
     if (isEmpty) throw StateError('min on empty Iterable');

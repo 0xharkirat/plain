@@ -2,7 +2,7 @@ import 'package:ruby/ruby.dart';
 import 'package:test/test.dart';
 
 void main() {
-  
+
   group('IntTimes extension', () {
     test('times calls function correct number of times', () {
       int callCount = 0;
