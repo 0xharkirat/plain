@@ -39,5 +39,4 @@ void main() {
 
   print(2020.year.isLeapYear);
 
-  "Hello"[Range(0, 5)];
 }
