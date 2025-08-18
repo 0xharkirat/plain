@@ -1,3 +1,5 @@
+import 'dart:math';
+
 extension RubyIterableExtensions<T extends Comparable<Object?>> on Iterable<T> {
   /// Smallest element (throws on empty). Use minOrNull() if unsure.
   T get min {
@@ -41,6 +43,32 @@ extension RubyIterableExtensions<T extends Comparable<Object?>> on Iterable<T> {
 
   // Optional alias for reverse sorted:
   List<T> rsorted() => sorted(desc: true);
+
+  /// each but reversed: reverse_each
+  ///
+  /// Calls [action] for every element in reverse iteration order.
+  /// - If this is a List, it iterates without copying.
+  /// - Otherwise it materializes to a fixed list once, then walks backwards.
+  void forEachReversed(void Function(T element) action) {
+    if (this is List<T>) {
+      final list = this as List<T>;
+      for (var i = list.length - 1; i >= 0; i--) {
+        action(list[i]);
+      }
+    } else {
+      final list = toList(growable: false);
+      for (var i = list.length - 1; i >= 0; i--) {
+        action(list[i]);
+      }
+    }
+  }
+
+  /// return random element from iterable
+  T get sample {
+    if (isEmpty) throw StateError('sample on empty Iterable');
+    final randomIndex = (Random().nextDouble() * length).floor();
+    return elementAt(randomIndex);
+  }
 
 
 }
