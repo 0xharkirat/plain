@@ -20,7 +20,24 @@ void main() {
   print("Max num (or null): ${nums.maxOrNull}"); // 10
 
   final names = ['Zed', 'Amy', 'bob'];
-  print("Sorted names: ${names.sorted()}"); // ['Amy', 'Zed', 'bob'] (case-sensitive)
-  print("Sorted names (case-insensitive): ${names.sortedBy((s) => s.toLowerCase())}"); // ['Amy', 'bob', 'Zed']
-  print("Sorted names by length desc: ${names.sortedBy((s) => s.length, desc: true)}"); // ['Zed', 'Amy', 'bob']
+  print(
+    "Sorted names: ${names.sorted()}",
+  ); // ['Amy', 'Zed', 'bob'] (case-sensitive)
+  print(
+    "Sorted names (case-insensitive): ${names.sortedBy((s) => s.toLowerCase())}",
+  ); // ['Amy', 'bob', 'Zed']
+  print(
+    "Sorted names by length desc: ${names.sortedBy((s) => s.length, desc: true)}",
+  ); // ['Zed', 'Amy', 'bob']
+
+  print(3.minutes.ago);
+
+  print(3.minutes.fromNow);
+
+  print(Date.today);
+  print(Date.now);
+
+  print(2020.year.isLeapYear);
+
+  "Hello"[Range(0, 5)];
 }
