@@ -6,6 +6,7 @@ extension RubyStringExtensions on String {
   /// unicode chars are failing
   String get reverse => characters.toList().reversed.join();
 
+  // get lines from multiline string
   List<String> get lines => split('\n');
 
 
@@ -15,6 +16,7 @@ extension RubyStringExtensions on String {
     return this[0].toUpperCase() + substring(1).toLowerCase();
   }
 
+  
   String get swapcase {
     return split('').map((c) {
       if (c == c.toUpperCase()) {

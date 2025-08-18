@@ -39,7 +39,7 @@ extension RubyIterableExtensions<T extends Comparable<Object?>> on Iterable<T> {
     return list;
   }
 
-  // Optional Ruby-ish alias for reverse sorted:
+  // Optional alias for reverse sorted:
   List<T> rsorted() => sorted(desc: true);
 
 

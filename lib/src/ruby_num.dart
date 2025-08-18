@@ -5,10 +5,8 @@ extension RubyMathExtensions on num {
 
   /// Nice aliases
   num get squared => pow(2);
-  num get cubed   => pow(3);
+  num get cubed => pow(3);
 
-  num get sqrt    => math.sqrt(this);
-  
-
+  num get sqrt => math.sqrt(this);
 
 }
