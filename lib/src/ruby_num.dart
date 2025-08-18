@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 
-extension RubyMathExtensions on num {
+extension RubyNumExtensions on num {
   num pow(num exponent) => math.pow(this, exponent);
 
   /// Nice aliases
