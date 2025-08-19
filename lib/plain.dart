@@ -10,5 +10,4 @@ export 'src/plain_datetime.dart';
 export 'src/plain_duration.dart';
 export 'src/plain_num.dart';
 
-
 // TODO: Export any libraries intended for clients of this package.

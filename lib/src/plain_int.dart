@@ -27,7 +27,11 @@ extension PlainIntExtensions on int {
   /// // Step 3: 5
   /// ```
   /// based on ruby's (4..5).each { |i| puts i }
-  void range(int end, {void Function(int number, int iteration)? doThis, int? step}) {
+  void range(
+    int end, {
+    void Function(int number, int iteration)? doThis,
+    int? step,
+  }) {
     final start = this;
     final increment = step ?? (end >= start ? 1 : -1);
     if (increment == 0) throw ArgumentError('step cannot be 0');
@@ -68,7 +72,8 @@ extension PlainIntExtensions on int {
   /// Returns the factorial of the number.
   /// Example: `5.factorial == 120`
   int get factorial {
-    if (this < 0) throw ArgumentError('Factorial is not defined for negative numbers');
+    if (this < 0)
+      throw ArgumentError('Factorial is not defined for negative numbers');
     if (this == 0 || this == 1) return 1;
     return List.generate(this, (i) => i + 1).reduce((a, b) => a * b);
   }

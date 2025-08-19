@@ -1,6 +1,3 @@
-
-
-
 extension Date on DateTime {
   /// Returns the current date and time.
   /// Use Date.now for the current date
@@ -39,5 +36,3 @@ extension Date on DateTime {
     return year % 4 == 0;
   }
 }
-
-

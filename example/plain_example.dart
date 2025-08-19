@@ -7,6 +7,7 @@ void main() {
     },
   );
 
+
   print("Reversed string: ${"Hello world!".reverse}");
 
   print("Reversed string: ${40.toString().reverse}");
@@ -37,7 +38,5 @@ void main() {
 
   print(2020.year.isLeapYear);
 
-  names.forEachReversed((x) => print(x));   // 4, 3, 2, 1
-
-
+  names.forEachReversed((x) => print(x)); // 4, 3, 2, 1
 }

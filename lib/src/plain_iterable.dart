@@ -1,6 +1,7 @@
 import 'dart:math';
 
-extension PlainIterableExtensions<T extends Comparable<Object?>> on Iterable<T> {
+extension PlainIterableExtensions<T extends Comparable<Object?>>
+    on Iterable<T> {
   /// Smallest element (throws on empty). Use minOrNull() if unsure.
   T get min {
     if (isEmpty) throw StateError('min on empty Iterable');
@@ -24,7 +25,10 @@ extension PlainIterableExtensions<T extends Comparable<Object?>> on Iterable<T> 
   }
 
   /// New list sorted by a comparable key from each element.
-  List<T> sortedBy<K extends Comparable<K>>(K Function(T e) key, {bool desc = false}) {
+  List<T> sortedBy<K extends Comparable<K>>(
+    K Function(T e) key, {
+    bool desc = false,
+  }) {
     final list = toList();
     list.sort((a, b) {
       final ka = key(a), kb = key(b);
@@ -69,8 +73,4 @@ extension PlainIterableExtensions<T extends Comparable<Object?>> on Iterable<T> 
     final randomIndex = (Random().nextDouble() * length).floor();
     return elementAt(randomIndex);
   }
-
-
 }
-
-
