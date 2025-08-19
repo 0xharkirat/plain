@@ -1,8 +1,8 @@
-import 'package:ruby/ruby.dart';
+import 'package:plain/plain.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('RubyDurationExtensions', () {
+  group('PlainDurationExtensions', () {
     test('ago returns DateTime this duration ago', () {
       final now = DateTime.now();
       final dt = 3.minutes.ago;

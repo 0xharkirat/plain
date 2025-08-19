@@ -1,8 +1,8 @@
-import 'package:ruby/ruby.dart';
+import 'package:plain/plain.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('RubyIterableExtensions', () {
+  group('PlainIterableExtensions', () {
     group('min', () {
       test('returns smallest element', () {
         expect([3, 1, 2].min, equals(1));

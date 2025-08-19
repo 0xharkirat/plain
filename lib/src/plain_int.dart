@@ -1,4 +1,4 @@
-extension RubyIntExtensions on int {
+extension PlainIntExtensions on int {
   /// Calls the [doThis] function the specified number of times.
   ///
   /// If [doThis] is null, nothing happens.

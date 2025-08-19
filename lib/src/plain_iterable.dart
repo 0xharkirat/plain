@@ -1,6 +1,6 @@
 import 'dart:math';
 
-extension RubyIterableExtensions<T extends Comparable<Object?>> on Iterable<T> {
+extension PlainIterableExtensions<T extends Comparable<Object?>> on Iterable<T> {
   /// Smallest element (throws on empty). Use minOrNull() if unsure.
   T get min {
     if (isEmpty) throw StateError('min on empty Iterable');

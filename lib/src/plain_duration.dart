@@ -1,4 +1,4 @@
-extension RubyDurationExtensions on Duration {
+extension PlainDurationExtensions on Duration {
   /// Returns the date and time this duration ago.
   /// use `3.minutes.ago`
   DateTime get ago => DateTime.now().subtract(this);

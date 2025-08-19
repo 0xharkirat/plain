@@ -1,8 +1,8 @@
-import 'package:ruby/ruby.dart';
+import 'package:plain/plain.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('RubyIntExtensions', () {
+  group('PlainIntExtensions', () {
     group('times', () {
       test('calls function correct number of times', () {
         int callCount = 0;

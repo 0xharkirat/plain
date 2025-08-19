@@ -1,8 +1,8 @@
-import 'package:ruby/src/ruby_string.dart';
+import 'package:plain/src/plain_string.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('RubyStringExtensions', () {
+  group('PlainStringExtensions', () {
     group('reverse', () {
       test('reverses a normal string', () {
         expect('hello'.reverse, equals('olleh'));

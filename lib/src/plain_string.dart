@@ -1,6 +1,6 @@
 import 'package:characters/characters.dart';
 
-extension RubyStringExtensions on String {
+extension PlainStringExtensions on String {
   /// Reverses the string.
   /// TODO: Implement a more efficient reverse method.
   /// unicode chars are failing
@@ -16,7 +16,7 @@ extension RubyStringExtensions on String {
     return this[0].toUpperCase() + substring(1).toLowerCase();
   }
 
-  
+
   String get swapcase {
     return split('').map((c) {
       if (c == c.toUpperCase()) {

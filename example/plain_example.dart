@@ -1,4 +1,4 @@
-import 'package:ruby/ruby.dart';
+import 'package:plain/plain.dart';
 
 void main() {
   3.times(
