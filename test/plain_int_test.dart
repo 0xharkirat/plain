@@ -20,8 +20,12 @@ void main() {
         expect(indices, [0, 1, 2]);
       });
 
-      test('does nothing if callback is null', () {
-        expect(() => 2.times(), returnsNormally);
+      test('uses custom step', () {
+        final indices = <int>[];
+        10.times(doThis: (i) {
+          indices.add(i);
+        }, step: 2);
+        expect(indices, [0, 2, 4, 6, 8]);
       });
     });
 

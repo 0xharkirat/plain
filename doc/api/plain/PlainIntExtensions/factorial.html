@@ -69,14 +69,16 @@
 <section class="desc markdown">
   <p>Returns the factorial of the number.
 Example: <code>5.factorial == 120</code></p>
+<p>Throws <a href="https://api.dart.dev/stable/3.8.1/dart-core/ArgumentError-class.html">ArgumentError</a> if the number is negative.</p>
 </section>
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">int get factorial {
-  if (this &lt; 0)
+  if (this &lt; 0) {
     throw ArgumentError(&#39;Factorial is not defined for negative numbers&#39;);
+  }
   if (this == 0 || this == 1) return 1;
   return List.generate(this, (i) =&gt; i + 1).reduce((a, b) =&gt; a * b);
 }</code></pre>

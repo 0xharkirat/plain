@@ -55,8 +55,9 @@
     <section class="multi-line-signature">
       
 <span class="returntype">void</span>
-<span class="name ">times</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="times-param-doThis"><span class="type-annotation">void</span> <span class="parameter-name">doThis</span>(<ol class="parameter-list single-line"> <li><span class="parameter" id="param-i"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.8.1/dart-core/int-class.html">int</a></span> <span class="parameter-name">i</span></span></li>
-</ol>)?, </span></li>
+<span class="name ">times</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="times-param-doThis"><span>required</span> <span class="type-annotation">void</span> <span class="parameter-name">doThis</span>(<ol class="parameter-list single-line"> <li><span class="parameter" id="param-i"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.8.1/dart-core/int-class.html">int</a></span> <span class="parameter-name">i</span></span></li>
+</ol>), </span></li>
+<li><span class="parameter" id="times-param-step"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.8.1/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">step</span>, </span></li>
 </ol>})
 
       
@@ -65,17 +66,17 @@
     
 <section class="desc markdown">
   <p>Calls the <code>doThis</code> function the specified number of times.</p>
-<p>If <code>doThis</code> is null, nothing happens.
-based on ruby's 3.times do: something</p>
+<p>based on ruby's <code>3.times do</code></p>
+<p>If <code>step</code> is not provided, it defaults to 1.</p>
 </section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">void times({void Function(int i)? doThis}) {
-  if (doThis == null) return;
-  for (var i = 0; i &lt; this; i++) {
+  <pre class="language-dart"><code class="language-dart">void times({required void Function(int i) doThis, int? step}) {
+  step ??= 1;
+  for (var i = 0; i &lt; this; i += step) {
     doThis(i);
   }
 }</code></pre>

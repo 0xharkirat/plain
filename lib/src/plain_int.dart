@@ -1,16 +1,17 @@
 extension PlainIntExtensions on int {
   /// Calls the [doThis] function the specified number of times.
   ///
-  /// If [doThis] is null, nothing happens.
-  /// based on ruby's 3.times do: something
-  void times({void Function(int i)? doThis}) {
-    if (doThis == null) return;
-    for (var i = 0; i < this; i++) {
+  /// based on ruby's `3.times do`
+  ///
+  /// If [step] is not provided, it defaults to 1.
+  void times({required void Function(int i) doThis, int? step}) {
+    step ??= 1;
+    for (var i = 0; i < this; i += step) {
       doThis(i);
     }
   }
 
-  /// Iterates from [this] (as [start]) to [end] (inclusive), calling [action] for each value.
+  /// Iterates from [this] (as [start]) to [end] (inclusive), calling [doThis] for each value.
   ///
   /// [number] is the current value in the sequence.
   /// [iteration] is the zero-based position in the loop.
@@ -71,9 +72,12 @@ extension PlainIntExtensions on int {
 
   /// Returns the factorial of the number.
   /// Example: `5.factorial == 120`
+  ///
+  /// Throws [ArgumentError] if the number is negative.
   int get factorial {
-    if (this < 0)
+    if (this < 0) {
       throw ArgumentError('Factorial is not defined for negative numbers');
+    }
     if (this == 0 || this == 1) return 1;
     return List.generate(this, (i) => i + 1).reduce((a, b) => a * b);
   }

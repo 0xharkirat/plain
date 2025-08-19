@@ -43,34 +43,48 @@
   <div id="dartdoc-main-content" class="main-content">
       
 <section class="desc markdown">
-  <!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
-<p>TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.</p>
-<h2 id="features">Features</h2>
-<p>TODO: List what your package can do. Maybe include images, gifs, or videos.</p>
+  <h1 id="plain">plain</h1>
+<p><strong>PLAIN: Practical Lightweight Additions for Idiomatic Natural code</strong></p>
+<p><code>plain</code> is a Dart package inspired by the elegance and human-centric philosophy of Ruby, as discussed by David Heinemeier Hansson (DHH) in his conversation with Lex Fridman. DHH’s perspective—“I trust humans as Matz trusts humans”—resonates deeply with the goal of this package: to make Dart code more natural, expressive, and enjoyable for humans.</p>
+<h2 id="inspiration">Inspiration</h2>
+<p><code>3.times {}</code> is the inspiration behind this package. It captures the essence of making code more expressive and human-friendly.</p>
 <h2 id="getting-started">Getting started</h2>
-<p>TODO: List prerequisites and provide or point to information on how to
-start using the package.</p>
+<p>Add <code>plain</code> to your <code>pubspec.yaml</code>:</p>
+<pre class="language-yaml"><code class="language-yaml">dependencies:
+  plain: ^1.0.0
+</code></pre>
+<p>Import it in your Dart code:</p>
+<pre class="language-dart"><code class="language-dart">import 'package:plain/plain.dart';
+</code></pre>
 <h2 id="usage">Usage</h2>
-<p>TODO: Include short and useful examples for package users. Add longer examples
-to <code>/example</code> folder.</p>
-<pre class="language-dart"><code class="language-dart">const like = 'sample';
+<pre class="language-dart"><code class="language-dart">import 'package:plain/plain.dart';
+
+void main() {
+  print('hello world'.capitalize); // Hello world
+  print('Dart'.reverse);           // traD
+  print(3.squared);                // 9
+  print(9.sqrt);                   // 3.0
+  print('foo'.insert(1, 'bar'));   // fbaroo
+}
 </code></pre>
 <h2 id="additional-information">Additional information</h2>
-<p>TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.</p>
+<ul>
+<li>
+<p><strong>Why “plain”?</strong>
+PLAIN stands for Practical Lightweight Additions for Idiomatic Natural code. The name reflects the package’s philosophy: keep things simple, useful, and human-friendly.</p>
+</li>
+<li>
+<p><strong>Contributing</strong>
+Contributions and suggestions are welcome! Please open issues or pull requests on <a href="https://github.com/0xharkirat/plain">GitHub</a>.</p>
+</li>
+<li>
+<p><strong>License</strong>
+MIT</p>
+</li>
+</ul>
+<hr>
+<p>Inspired by the trust in humans and the pursuit of simplicity.
+“Code should be optimized for humans, not machines.” —</p>
 </section>
 
 
