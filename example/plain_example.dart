@@ -7,8 +7,6 @@ void main() {
     },
   );
 
-  print("Repeated string: ${"Jimmy" * 4}");
-
   print("Reversed string: ${"Hello world!".reverse}");
 
   print("Reversed string: ${40.toString().reverse}");
