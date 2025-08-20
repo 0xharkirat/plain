@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="plain API docs, for the Dart programming language.">
-  <title>plain - Dart API docs</title>
+  <meta name="description" content="pleasant API docs, for the Dart programming language.">
+  <title>pleasant - Dart API docs</title>
 
 
   
@@ -24,9 +24,9 @@
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
-    <li class="self-crumb">plain package</li>
+    <li class="self-crumb">pleasant package</li>
   </ol>
-  <div class="self-name">plain</div>
+  <div class="self-name">pleasant</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -43,39 +43,64 @@
   <div id="dartdoc-main-content" class="main-content">
       
 <section class="desc markdown">
-  <h1 id="plain">plain</h1>
-<p><strong>PLAIN: Practical Lightweight Additions for Idiomatic Natural code</strong></p>
-<p><code>plain</code> is a Dart package inspired by the elegance and human-centric philosophy of Ruby, as discussed by David Heinemeier Hansson (DHH) in his conversation with Lex Fridman. DHH’s perspective—“I trust humans as Matz trusts humans”—resonates deeply with the goal of this package: to make Dart code more natural, expressive, and enjoyable for humans.</p>
+  <h1 id="pleasant">pleasant</h1>
+<p><code>pleasant</code> is a Dart package inspired by the elegance and human-centric philosophy of Ruby, as discussed by David Heinemeier Hansson (DHH) in his conversation with Lex Fridman.</p>
+<p>In pursuit of beautiful pleasant code &amp; trust in humans.
+“I trust humans in the same way that Matz trusts humans” — DHH</p>
+<blockquote>
+<p>No way, this package aims to change dart syntax. The goal is to give developers an option to write beautiful &amp; pleasant code.</p>
+</blockquote>
 <h2 id="inspiration">Inspiration</h2>
-<p><code>3.times {}</code> is the inspiration behind this package. It captures the essence of making code more expressive and human-friendly.</p>
+<p>There is something so pleasant about <code>3.times {}</code>.
+It captures the essence of making code more expressive and human-friendly.</p>
 <h2 id="getting-started">Getting started</h2>
-<p>Add <code>plain</code> to your <code>pubspec.yaml</code>:</p>
+<p>Add <code>pleasant</code> to your <code>pubspec.yaml</code>:</p>
 <pre class="language-yaml"><code class="language-yaml">dependencies:
-  plain: ^1.0.0
+  pleasant: ^1.0.0
 </code></pre>
-<p>Import it in your Dart code:</p>
-<pre class="language-dart"><code class="language-dart">import 'package:plain/plain.dart';
-</code></pre>
-<h2 id="usage">Usage</h2>
-<pre class="language-dart"><code class="language-dart">import 'package:plain/plain.dart';
+<h2 id="tldr-show-me">TL;DR (show me)</h2>
+<h3 id="int-extensions">int extensions</h3>
+<pre class="language-dart"><code class="language-dart">import 'package:pleasant/pleasant.dart';
 
 void main() {
-  print('hello world'.capitalize); // Hello world
-  print('Dart'.reverse);           // traD
-  print(3.squared);                // 9
-  print(9.sqrt);                   // 3.0
-  print('foo'.insert(1, 'bar'));   // fbaroo
+  // --- Ruby-ish loops -------------------------------------------------------
+  // 3.times { |i| ... }
+  3.times(doThis: (i) =&gt; print('hi #$i'));        // hi #0, #1, #2
+
+  // times with step (indexes jump by step)
+  6.times(doThis: (i) =&gt; print(i), step: 2);      // 0, 2, 4
+
+  // (4..7).each { |n| ... }  with iteration index
+  4.range(7, doThis: (number, iteration) =&gt; print('$iteration:$number'));
+  // 0:4, 1:5, 2:6, 3:7
+
+  // descending range with custom step
+  10.range(2, step: -2, doThis: (n, _) =&gt; print(n)); // 10, 8, 6, 4, 2
+
+  // --- Durations (sugar) ----------------------------------------------------
+  // produce Duration values
+  print(5.seconds);   // 0:00:05.000000
+  print(2.minutes);   // 0:02:00.000000
+  print(3.hours);     // 3:00:00.000000
+  print(7.days);      // 168:00:00.000000
+  print(150.ms);      // 0:00:00.150000
+  print(42.us);       // 0:00:00.000042
+
+
+  // --- Year shortcut --------------------------------------------------------
+  final newYear = 2025.year;  // DateTime(2025, 1, 1)
+  print(newYear);
+
+  // --- Factorial ------------------------------------------------------------
+  print(5.factorial); // 120
 }
+
 </code></pre>
 <h2 id="additional-information">Additional information</h2>
 <ul>
 <li>
-<p><strong>Why “plain”?</strong>
-PLAIN stands for Practical Lightweight Additions for Idiomatic Natural code. The name reflects the package’s philosophy: keep things simple, useful, and human-friendly.</p>
-</li>
-<li>
 <p><strong>Contributing</strong>
-Contributions and suggestions are welcome! Please open issues or pull requests on <a href="https://github.com/0xharkirat/plain">GitHub</a>.</p>
+Contributions and suggestions are welcome! Please open issues or pull requests on <a href="https://github.com/0xharkirat/pleasant">GitHub</a>.</p>
 </li>
 <li>
 <p><strong>License</strong>
@@ -83,16 +108,14 @@ MIT</p>
 </li>
 </ul>
 <hr>
-<p>Inspired by the trust in humans and the pursuit of simplicity.
-“Code should be optimized for humans, not machines.” —</p>
 </section>
 
 
       <section class="summary">
           <h2>Libraries</h2>
         <dl>
-          <dt id="plain">
-  <span class="name"><a href="plain/">plain</a></span> 
+          <dt id="pleasant">
+  <span class="name"><a href="pleasant/">pleasant</a></span> 
 
 </dt>
 <dd>Support for doing something awesome.
@@ -109,13 +132,13 @@ MIT</p>
   </form>
 </header>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-    <li class="self-crumb">plain package</li>
+    <li class="self-crumb">pleasant package</li>
 </ol>
 
-    <h5 class="hidden-xs"><span class="package-name">plain</span> <span class="package-kind">package</span></h5>
+    <h5 class="hidden-xs"><span class="package-name">pleasant</span> <span class="package-kind">package</span></h5>
     <ol>
       <li class="section-title">Libraries</li>
-      <li><a href="plain/">plain</a></li>
+      <li><a href="pleasant/">pleasant</a></li>
 </ol>
 
   </div>
@@ -124,7 +147,7 @@ MIT</p>
 </main>
 <footer>
   <span class="no-break">
-    plain
+    pleasant
       1.0.0
   </span>
   

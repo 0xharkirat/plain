@@ -1,30 +1,37 @@
-import 'package:plain/plain.dart';
+import 'package:pleasant/pleasant.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('PlainIntExtensions', () {
+  group('PleasantIntExtensions', () {
     group('times', () {
       test('calls function correct number of times', () {
         int callCount = 0;
-        5.times(doThis: (_) {
-          callCount++;
-        });
+        5.times(
+          doThis: (_) {
+            callCount++;
+          },
+        );
         expect(callCount, 5);
       });
 
       test('passes correct index', () {
         final indices = <int>[];
-        3.times(doThis: (i) {
-          indices.add(i);
-        });
+        3.times(
+          doThis: (i) {
+            indices.add(i);
+          },
+        );
         expect(indices, [0, 1, 2]);
       });
 
       test('uses custom step', () {
         final indices = <int>[];
-        10.times(doThis: (i) {
-          indices.add(i);
-        }, step: 2);
+        10.times(
+          doThis: (i) {
+            indices.add(i);
+          },
+          step: 2,
+        );
         expect(indices, [0, 2, 4, 6, 8]);
       });
     });
@@ -33,32 +40,46 @@ void main() {
       test('iterates from start to end with default step', () {
         final numbers = <int>[];
         final iterations = <int>[];
-        2.range(5, doThis: (number, iteration) {
-          numbers.add(number);
-          iterations.add(iteration);
-        });
+        2.range(
+          5,
+          doThis: (number, iteration) {
+            numbers.add(number);
+            iterations.add(iteration);
+          },
+        );
         expect(numbers, [2, 3, 4, 5]);
         expect(iterations, [0, 1, 2, 3]);
       });
 
       test('iterates from start to end with custom positive step', () {
         final numbers = <int>[];
-        1.range(5, doThis: (number, _) {
-          numbers.add(number);
-        }, step: 2);
+        1.range(
+          5,
+          doThis: (number, _) {
+            numbers.add(number);
+          },
+          step: 2,
+        );
         expect(numbers, [1, 3, 5]);
       });
 
       test('iterates from start to end with custom negative step', () {
         final numbers = <int>[];
-        5.range(1, doThis: (number, _) {
-          numbers.add(number);
-        }, step: -2);
+        5.range(
+          1,
+          doThis: (number, _) {
+            numbers.add(number);
+          },
+          step: -2,
+        );
         expect(numbers, [5, 3, 1]);
       });
 
       test('throws ArgumentError if step is zero', () {
-        expect(() => 1.range(5, doThis: (_, __) {}, step: 0), throwsArgumentError);
+        expect(
+          () => 1.range(5, doThis: (_, __) {}, step: 0),
+          throwsArgumentError,
+        );
       });
 
       test('does nothing if callback is null', () {
@@ -117,7 +138,7 @@ void main() {
 
       test('throws ArgumentError for negative integer', () {
         expect(() => (-3).factorial, throwsArgumentError);
-         });
+      });
     });
   });
 }

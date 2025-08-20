@@ -1,7 +1,7 @@
-extension PlainIntExtensions on int {
+extension PleasantIntExtensions on int {
   /// Calls the [doThis] function the specified number of times.
   ///
-  /// based on ruby's `3.times do`
+  /// based on ruby's `3.times {}`
   ///
   /// If [step] is not provided, it defaults to 1.
   void times({required void Function(int i) doThis, int? step}) {

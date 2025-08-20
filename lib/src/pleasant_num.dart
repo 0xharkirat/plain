@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 
 /// Extension methods for enhanced numeric operations.
-extension PlainNumExtensions on num {
+extension PleasantNumExtensions on num {
   /// Returns this number raised to the power of [exponent].
   ///
   /// Example: `3.pow(2)` returns `9`.

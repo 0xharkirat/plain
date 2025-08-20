@@ -1,8 +1,8 @@
-import 'package:plain/plain.dart';
+import 'package:pleasant/pleasant.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('PlainDurationExtensions', () {
+  group('PleasantDurationExtensions', () {
     test('ago returns DateTime this duration ago', () {
       final now = DateTime.now();
       final dt = 3.minutes.ago;
@@ -20,10 +20,7 @@ void main() {
       final dt = 5.seconds.fromNow;
       final diff = dt.difference(now).inSeconds;
       // TODO: improve this
-      expect(
-        diff,
-        inInclusiveRange(4, 6),
-      ); // allow ±1s
+      expect(diff, inInclusiveRange(4, 6)); // allow ±1s
     });
   });
 }

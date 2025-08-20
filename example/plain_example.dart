@@ -1,4 +1,4 @@
-import 'package:plain/plain.dart';
+import 'package:pleasant/pleasant.dart';
 
 void main() {
   3.times(
@@ -7,7 +7,7 @@ void main() {
     },
   );
 
-  
+
 
 
   print("Reversed string: ${"Hello world!".reverse}");

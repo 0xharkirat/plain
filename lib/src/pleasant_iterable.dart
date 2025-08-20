@@ -1,6 +1,6 @@
 import 'dart:math';
 
-extension PlainIterableExtensions<T extends Comparable<Object?>>
+extension PleasantIterableExtensions<T extends Comparable<Object?>>
     on Iterable<T> {
   /// Smallest element (throws on empty). Use minOrNull() if unsure.
   T get min {

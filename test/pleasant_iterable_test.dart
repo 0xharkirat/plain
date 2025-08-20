@@ -1,8 +1,8 @@
-import 'package:plain/plain.dart';
+import 'package:pleasant/pleasant.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('PlainIterableExtensions', () {
+  group('PleasantIterableExtensions', () {
     group('min', () {
       test('returns smallest element', () {
         expect([3, 1, 2].min, equals(1));

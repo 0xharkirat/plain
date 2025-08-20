@@ -1,8 +1,8 @@
-import 'package:plain/plain.dart';
+import 'package:pleasant/pleasant.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('PlainNumExtensions', () {
+  group('PleasantNumExtensions', () {
     test('sqrt returns correct square root', () {
       expect(16.sqrt, equals(4));
       expect(2.25.sqrt, closeTo(1.5, 0.0001));
@@ -12,8 +12,6 @@ void main() {
       expect(2.pow(3), equals(8));
       expect(5.pow(0), equals(1));
     });
-
-
 
     // Add more tests for other methods if present
   });

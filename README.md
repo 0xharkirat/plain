@@ -1,24 +1,26 @@
 
-# plain
+# pleasant
 
-**PLAIN: Practical Lightweight Additions for Idiomatic Natural code**
 
-`plain` is a Dart package inspired by the elegance and human-centric philosophy of Ruby, as discussed by David Heinemeier Hansson (DHH) in his conversation with Lex Fridman. DHH’s perspective—“I trust humans as Matz trusts humans”—resonates deeply with the goal of this package: to make Dart code more natural, expressive, and enjoyable for humans.
+`pleasant` is a Dart package inspired by the elegance and human-centric philosophy of Ruby, as discussed by David Heinemeier Hansson (DHH) in his conversation with Lex Fridman.
 
-Inspired by the trust in humans and the pursuit of simplicity.
+In pursuit of beautiful pleasant code & trust in humans.
 “I trust humans in the same way that Matz trusts humans” — DHH
+
+> No way, this package aims to change dart syntax. The goal is to give developers an option to write beautiful & pleasant code.
 
 ## Inspiration
 
-`3.times {}` is the inspiration behind this package. It captures the essence of making code more expressive and human-friendly.
+There is something so pleasant about `3.times {}`.
+It captures the essence of making code more expressive and human-friendly.
 
 ## Getting started
 
-Add `plain` to your `pubspec.yaml`:
+Add `pleasant` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  plain: ^1.0.0
+  pleasant: ^1.0.0
 ```
 
 ## TL;DR (show me)
@@ -26,7 +28,7 @@ dependencies:
 ### int extensions
 
 ```dart
-import 'package:plain/plain.dart';
+import 'package:pleasant/pleasant.dart';
 
 void main() {
   // --- Ruby-ish loops -------------------------------------------------------
@@ -67,7 +69,7 @@ void main() {
 
 
 - **Contributing**
-  Contributions and suggestions are welcome! Please open issues or pull requests on [GitHub](https://github.com/0xharkirat/plain).
+  Contributions and suggestions are welcome! Please open issues or pull requests on [GitHub](https://github.com/0xharkirat/pleasant).
 
 - **License**
   MIT

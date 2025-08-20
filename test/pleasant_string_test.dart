@@ -1,8 +1,8 @@
-import 'package:plain/src/plain_string.dart';
+import 'package:pleasant/pleasant.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('PlainStringExtensions', () {
+  group('PleasantStringExtensions', () {
     group('reverse', () {
       test('reverses a normal string', () {
         expect('hello'.reverse, equals('olleh'));

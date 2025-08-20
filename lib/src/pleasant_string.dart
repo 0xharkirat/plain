@@ -1,7 +1,7 @@
 import 'package:characters/characters.dart';
 
 /// Extension methods for enhanced string manipulation.
-extension PlainStringExtensions on String {
+extension PleasantStringExtensions on String {
   /// Returns a new string with the characters in reverse order.
   ///
   /// Handles Unicode grapheme clusters correctly.
