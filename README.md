@@ -1,7 +1,6 @@
 
 # pleasant
 
-
 `pleasant` is a Dart package inspired by the elegance and human-centric philosophy of Ruby, as discussed by David Heinemeier Hansson (DHH) in his conversation with Lex Fridman.
 
 In pursuit of beautiful pleasant code & trust in humans.
@@ -72,7 +71,7 @@ void main() {
   Contributions and suggestions are welcome! Please open issues or pull requests on [GitHub](https://github.com/0xharkirat/pleasant).
 
 - **License**
-  MIT
+  [MIT](LICENSE)
 
 ---
 
